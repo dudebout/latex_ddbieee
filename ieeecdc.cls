@@ -1,7 +1,7 @@
 \ProvidesClass{ieeecdc}
 \NeedsTeXFormat{LaTeX2e}
 
-\newif\ifCLASSOPTIONdraft           \CLASSOPTIONdraftfalse
+\newif\ifCLASSOPTIONdraft \CLASSOPTIONdraftfalse
 \DeclareOption{draft}{\CLASSOPTIONdrafttrue}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{IEEEtran}}
