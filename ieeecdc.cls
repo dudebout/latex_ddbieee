@@ -25,6 +25,7 @@
      \mbox{}\hfill\begin{@IEEEauthorhalign}\@author\end{@IEEEauthorhalign}\hfill\mbox{}\par}\relax
 \end{center}}
 
+\RequirePackage{amsthm}
 
 \IEEEoverridecommandlockouts
 
