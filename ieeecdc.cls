@@ -13,9 +13,11 @@
 \ProcessOptions
 
 \if@ieeetran
+
   \if@working
     \LoadClass[onecolumn, twoside, draft, 12pt]{IEEEtran}
   \else
+    % Setting the proper margins
     \newcommand{\CLASSINPUTtoptextmargin}{54pt}
     \newcommand{\CLASSINPUTbottomtextmargin}{54pt}
     \newcommand{\CLASSINPUTinnersidemargin}{54pt}
@@ -26,13 +28,16 @@
   \if@amsthm
     \RequirePackage{amsthm}
   \fi
+
 \else
+
   \if@working
     \LoadClass[onecolumn, twoside, draft, 12pt]{ieeeconf}
   \else
     \LoadClass[letterpaper, 10pt, conference]{ieeeconf}
   \fi
 
+  % Integrating amsthm properly by redefining proof
   \if@amsthm
     \makeatletter
     \let\IEEEproof\proof
@@ -45,6 +50,7 @@
 
 \fi
 
+% Making the title bold
 \def\@maketitle{\newpage
 \begin{center}
   \vskip0.25in{\bfseries\LARGE\@title\par}\vskip1.0em\par
@@ -53,6 +59,7 @@
 \end{center}}
 
 
+% Making sure the \thanks command is available
 \IEEEoverridecommandlockouts
 
 \endinput
