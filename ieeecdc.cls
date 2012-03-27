@@ -30,7 +30,9 @@
       \mbox{}\hfill\begin{@IEEEauthorhalign}\@author\end{@IEEEauthorhalign}\hfill\mbox{}\par}\relax
   \end{center}}
 
-  \RequirePackage{amsthm}
+  \if@amsthm
+    \RequirePackage{amsthm}
+  \fi
 \else
   \if@working
     \LoadClass[onecolumn, twoside, draft, 12pt]{ieeeconf}
