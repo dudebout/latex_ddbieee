@@ -29,6 +29,14 @@
     \RequirePackage{amsthm}
   \fi
 
+  % Making the title bold
+  \def\@maketitle{\newpage
+  \begin{center}
+    \vskip0.25in{\bfseries\LARGE\@title\par}\vskip1.0em\par
+    {\@IEEEspecialpapernotice\mbox{}\vskip\@IEEEauthorblockconfadjspace
+      \mbox{}\hfill\begin{@IEEEauthorhalign}\@author\end{@IEEEauthorhalign}\hfill\mbox{}\par}\relax
+  \end{center}}
+
 \else
 
   \if@working
@@ -48,16 +56,15 @@
     \RequirePackage{amsthm}
   \fi
 
+  % Making the title bold
+  \def\@maketitle{\newpage
+  \begin{center}
+    \vskip0.25in{\bfseries\LARGE\@title\par}\vskip1.0em\par
+    {\@specialpapernotice\mbox{}\vskip\@IEEEauthorblockconfadjspace
+      \mbox{}\hfill\begin{@IEEEauthorhalign}\@author\end{@IEEEauthorhalign}\hfill\mbox{}\par}\relax
+  \end{center}}
+
 \fi
-
-% Making the title bold
-\def\@maketitle{\newpage
-\begin{center}
-  \vskip0.25in{\bfseries\LARGE\@title\par}\vskip1.0em\par
-  {\@IEEEspecialpapernotice\mbox{}\vskip\@IEEEauthorblockconfadjspace
-    \mbox{}\hfill\begin{@IEEEauthorhalign}\@author\end{@IEEEauthorhalign}\hfill\mbox{}\par}\relax
-\end{center}}
-
 
 % Making sure the \thanks command is available
 \IEEEoverridecommandlockouts
