@@ -27,6 +27,7 @@
 
   \if@amsthm
     \RequirePackage{amsthm}
+    \renewcommand{\qedsymbol}{\(\blacksquare\)}
   \fi
 
   % Making the title bold
@@ -54,6 +55,7 @@
     \let\endproof\@undefined
     \makeatother
     \RequirePackage{amsthm}
+    \renewcommand{\qedsymbol}{\(\blacksquare\)}
   \fi
 
   % Making the title bold
