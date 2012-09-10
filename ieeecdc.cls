@@ -46,6 +46,9 @@
     \LoadClass[letterpaper, 10pt, conference]{ieeeconf}
   \fi
 
+  \def\endfigure{\end@float}
+  \def\endtable{\end@float}
+
   % Integrating amsthm properly by redefining proof
   \if@amsthm
     \makeatletter
