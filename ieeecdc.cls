@@ -1,13 +1,16 @@
 \ProvidesClass{ieeecdc}
 \NeedsTeXFormat{LaTeX2e}
+\RequirePackage{xspace}
 
 \newif\if@working \@workingfalse
 \newif\if@ieeetran \@ieeetranfalse
 \newif\if@amsthm \@amsthmfalse
+\newif\if@nicetitle \@nicetitlefalse
 
 \DeclareOption{working}{\@workingtrue}
 \DeclareOption{ieeetran}{\@ieeetrantrue}
 \DeclareOption{amsthm}{\@amsthmtrue}
+\DeclareOption{nicetitle}{\@nicetitletrue}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{ieeeconf}}
 
 \ProcessOptions
@@ -30,14 +33,17 @@
     \renewcommand{\qedsymbol}{\(\blacksquare\)}
   \fi
 
+  \if@nicetitle
+  \renewcommand{\and}{and\xspace}
+  \else
   % Making the title bold
   \def\@maketitle{\newpage
-  \begin{center}
-    \vskip0.25in{\bfseries\LARGE\@title\par}\vskip1.0em\par
-    {\@IEEEspecialpapernotice\mbox{}\vskip\@IEEEauthorblockconfadjspace
-      \mbox{}\hfill\begin{@IEEEauthorhalign}\@author\end{@IEEEauthorhalign}\hfill\mbox{}\par}\relax
-  \end{center}}
-
+    \begin{center}
+      \vskip0.25in{\bfseries\LARGE\@title\par}\vskip1.0em\par
+      {\@IEEEspecialpapernotice\mbox{}\vskip\@IEEEauthorblockconfadjspace
+        \mbox{}\hfill\begin{@IEEEauthorhalign}\@author\end{@IEEEauthorhalign}\hfill\mbox{}\par}\relax
+    \end{center}}
+    \fi
 \else
 
   \if@working
