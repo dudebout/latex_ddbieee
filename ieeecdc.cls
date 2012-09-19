@@ -57,12 +57,10 @@
 
   % Integrating amsthm properly by redefining proof
   \if@amsthm
-    \makeatletter
     \let\IEEEproof\proof
     \let\IEEEendproof\endproof
     \let\proof\@undefined
     \let\endproof\@undefined
-    \makeatother
     \RequirePackage{amsthm}
     \renewcommand{\qedsymbol}{\(\blacksquare\)}
   \fi
