@@ -11,11 +11,10 @@
 \DeclareOption{ieeetran}{\@ieeetrantrue}
 \DeclareOption{amsthm}{\@amsthmtrue}
 \DeclareOption{nicetitle}{\@nicetitletrue}
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{ieeeconf}}
-
-\ProcessOptions
 
 \if@ieeetran
+  \DeclareOption*{\PassOptionsToClass{\CurrentOption}{IEEEtran}}
+  \ProcessOptions
 
   \if@working
     \LoadClass[onecolumn, twoside, draft, 12pt]{IEEEtran}
@@ -45,6 +44,8 @@
     \end{center}}
     \fi
 \else
+  \DeclareOption*{\PassOptionsToClass{\CurrentOption}{ieeeconf}}
+  \ProcessOptions
 
   \if@working
     \LoadClass[onecolumn, twoside, draft, 12pt]{ieeeconf}
