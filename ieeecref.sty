@@ -1,4 +1,6 @@
 \RequirePackage[capitalize]{cleveref}
 
-\crefname{equation}{}{}
-\Crefname{equation}{Equation}{Equations}
+\crefformat{equation}{(#2#1#3)}
+\Crefformat{equation}{Equation~(#2#1#3)}
+\crefmultiformat{equation}{(#2#1#3)}{ and~(#2#1#3)}{, (#2#1#3)}{\creflastconjunction~(#2#1#3)}
+\Crefmultiformat{equation}{Equations (#2#1#3)}{ and~(#2#1#3)}{, (#2#1#3)}{\creflastconjunction~(#2#1#3)}
