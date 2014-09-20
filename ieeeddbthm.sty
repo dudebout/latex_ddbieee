@@ -1,0 +1,24 @@
+\ProvidesPackage{ieeeddbthm}
+% A more readable theorem style
+
+\makeatletter
+\let\IEEEproof\proof
+\let\IEEEendproof\endproof
+\let\proof\@undefined
+\let\endproof\@undefined
+\makeatother
+
+\RequirePackage{amsthm}
+
+\newtheoremstyle{ieeeddb}% % Name
+  {0pt}%       % Space above
+  {0pt}%       % Space below
+  {\itshape}%  % Body font
+  {}%          % Indent amount
+  {\bfseries}% % Theorem head font
+  {.}%         % Punctuation after theorem head
+  { }%         % Space after theorem head, ' ', or \newline
+  {}%          % Theorem head spec (can be left empty, meaning `normal')
+\theoremstyle{ieeeddb}
+
+\RequirePackage{ieeethm}
